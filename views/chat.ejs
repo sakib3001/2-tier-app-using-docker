@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Showing All The Chats</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>This is showing all the chats</h1>
+    <a href="http://localhost:8080/chat/new">New</a>
+
+    <%for(chat of chats){%>
+    <div>
+      <p>From: <%=chat.from%></p>
+      <p>To: <%=chat.to%></p>
+
+      <p>Message: <%=chat.msg%></p>
+      <div class="btns">
+        <form action="/chat/<%= chat._id%>/edit" method="get">
+          <button class="edit">Edit</button>
+        </form>
+        <form action="/chat/<%= chat._id%>?_method=DELETE" method="post">
+          <button class="edit">Delete</button>
+        </form>
+      </div>
+     
+
+      <!-- converting the Date data type to string -->
+      <!-- <p>Sent-on: <%=chat.created_at%></p> -->
+      <!-- Ei pura jinish ta buzo kam ta kemne kortase -->
+      <p>
+        Sent-on: <%=chat.created_at.toString().split(" ").slice(0,4).join("-")%>
+      </p>
+    </div>
+    <%}%>
+  </body>
+</html>

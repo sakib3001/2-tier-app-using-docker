@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Msg</title>
+    <style>
+        .conti {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .message-from{
+            background-color: rgb(227, 206, 247);
+            border-radius: 10px;
+            box-shadow: 2px 0px 10px black;
+        }
+        form{
+            padding: 20px;
+        }
+        input{
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="conti">
+        <div class="message-from">
+            <form action="/chat" method="post">
+                <label for="from">From:</label>
+                <input type="text" name="from" id="from">
+                <br>
+                <label for="to">To:</label>
+                <input type="text" name="to" id="to">
+                <br>
+                <label for="msg">Message:</label>
+                <input type="text" name="msg" id="msg">
+                <br>
+                <button>Send</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

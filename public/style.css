@@ -1,0 +1,42 @@
+div{
+    background-color:bisque;
+    border-radius: 25px;
+}
+
+p{
+    position: relative;
+    left: 20px;
+    padding: 5px;
+    font-size: 1.5em;
+}
+h1{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 25px;
+    font-weight: 500;
+}
+
+.edit{
+    text-decoration: none;
+    background-color: rgb(246, 110, 79);
+    color: rgb(9, 9, 9);
+    padding: 5px;
+    border-radius: 10px;
+    position: relative;
+    left: 20px;
+    bottom: 20px;
+    margin-right: 10px;
+}
+
+.btns{
+    display: flex;
+}
+.btn1{
+    margin-right: 10px;
+}
